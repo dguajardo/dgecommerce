@@ -23,7 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: ecomrc_development
+  development:
+  adapter: postgresql
+  encoding: unicode
+  database: ecomrc
+  pool: 5
+  username: diego
+  password: luciana
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
