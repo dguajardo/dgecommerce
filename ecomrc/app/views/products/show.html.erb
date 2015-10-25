@@ -25,5 +25,15 @@
   <%= @product.photo %>
 </p>
 
+<div calss="new-comment" stlye="background-color:gray">
+<%= form_for [@product, @review] do |f| %>
+  <%= f.label :review %>
+  <%= f.text_area :review %>
+
+  <%= f.submit "Send" %>
+  <% end %>
+</div>
+
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
