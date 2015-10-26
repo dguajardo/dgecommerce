@@ -11,7 +11,9 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
   @review = @product.reviews.build
+  @last_reviews = @product.reviews.last(5)
   end
+
 
 
   # GET /products/new

@@ -30,13 +30,8 @@
 <%= link_to 'Back', products_path %>
 </div>
 
-  <div class="new-comment" style="background-color:gray">
-  <%= form_for [@product, @review] do |f| %>
-    <%= f.label :review %>
-    <%= f.text_area :review %>
-    <%= f.submit "enviar" %>
-    <% end %>
-  </div>
+<%= render partial: "review/review", collection: @last_reviews %>
 
+<%= render "review/form" %>
 
 
