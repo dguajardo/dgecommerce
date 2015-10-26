@@ -1,7 +1,7 @@
 <div class="new-comment" style="background-color:gray">
   <%= form_for [@product, @review] do |f| %>
-    <%= f.label :review %>
-    <%= f.text_area :review %>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
     <%= f.submit "enviar" %>
     <% end %>
   </div>
