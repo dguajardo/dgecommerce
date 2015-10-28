@@ -1,0 +1,4 @@
+class AddUserIdToProduct < ActiveRecord::Migration
+  def change
+  end
+end
