@@ -22,7 +22,7 @@
         <td><%= product.description %></td>
         <td><%= product.category %></td>
         <td><%= product.stock %></td>
-        <td><%= product.price %></td>
+        <td><%= number_to_currency product.price %></td>
         <td><%= product.photo %></td>
         </tr>
     <% end %>
@@ -31,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+
