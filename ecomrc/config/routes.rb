@@ -2,9 +2,19 @@ Rails.application.routes.draw do
   devise_for :users
   get 'reviews/create'
 
-  resources :products do
+resources :products, only: [:index, :show]
+  resources :products do 
     resources :reviews, only: [:create]
   end
+
+  namespace :admin do
+    resources :products
+    resources :orders
+    resources :users
+
+    get '/', to: 'pages#index' 
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,5 @@
+<p id="notice"><%= notice %></p>
+<%= render partial: "reviews/review", collection: @last_comments %>
+
+<%= link_to 'Edit', edit_admin_product_path(@admin_product) %> |
+<%= link_to 'Back', admin_products_path %>
