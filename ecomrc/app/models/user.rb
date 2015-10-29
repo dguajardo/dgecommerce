@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   source_type: 'Review'
   
   enum role: [:guest, :moderator]
-  #validates :name, :lastname, :username presence:true
+  validates :name, :lastname, :username, presence:true 
   
   
 end
